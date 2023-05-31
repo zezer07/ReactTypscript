@@ -1,13 +1,15 @@
-import LayoutProps from "../../interfaces/LayoutProps";
-import PersonListComponent from "../Person/List/PersonListComponent";
+// import { useContext } from "react";
+import { PropsWithChildren } from "react";
+// import { PersonContext } from "../../store/person-context";
+import PersonList from "../Person/List/PersonList";
 import "./Layout.css";
 
-function Layout({ persons, children }: LayoutProps) {
+function Layout({ children }: PropsWithChildren) {
   return (
-    <div>
-      <PersonListComponent persons={persons} />
+    <>
+      <PersonList/>
       <main>{children}</main>
-    </div>
+    </>
   );
 }
 

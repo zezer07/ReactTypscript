@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./PersonListComponent.css";
+// import { Person } from "../../../interfaces/Person";
+import { PersonContext } from "../../../store/person-context";
+import "./PersonList.style.css";
 
-const PersonListComponent = ({ persons }: { persons: any[] }) => {
+const PersonListComponent = () => {
+  const {persons} = useContext(PersonContext)
   return (
     <div>
       <h1 className="title"> List of Persons </h1>
